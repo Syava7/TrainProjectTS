@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import AppTitle from '../AppTitle/AppTitle';
+import PageTitle from '../AppTitle/AppTitle';
 import Accordion from '../Accordion/Accordion';
 import Rating from '../Rating/Rating';
 
@@ -9,10 +9,14 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <AppTitle />
+        <PageTitle title="I'm page title HAHAHAH" />
       </header>
-      <Rating />
-      <Accordion />
+      Article
+      <Rating value={3} />
+      <Accordion title="Menu" />
+      <Accordion title="Users" />
+      Article 2
+      <Rating value={4} />
     </div>
   );
 }
