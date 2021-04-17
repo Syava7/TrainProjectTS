@@ -1,11 +1,11 @@
 import React from 'react';
 
-type AccordionTitleProps = {
+type AccordionTitlePropsType = {
   title: string
 }
 
 
-const AccordionTitle = (props: AccordionTitleProps) => {
+const AccordionTitle = (props: AccordionTitlePropsType) => {
   return (
     <div>
       <h3>{props.title}</h3>

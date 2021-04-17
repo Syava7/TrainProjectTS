@@ -13,8 +13,10 @@ function App() {
       </header>
       Article
       <Rating value={3} />
-      <Accordion title="Menu" />
-      <Accordion title="Users" />
+      <Accordion title="Menu"
+                 collapsed={false} />
+      <Accordion title="Users"
+                 collapsed={true}/>
       Article 2
       <Rating value={4} />
     </div>

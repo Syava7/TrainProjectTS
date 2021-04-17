@@ -2,16 +2,23 @@ import React from 'react';
 import AccordionTitle from './AccordionTitle/AccordionTitle';
 import AccordionBody from './AccordionBody/AccordionBody';
 
-type AccordionTitleProps = {
+type AccordionPropsType = {
   title: string
+  collapsed: boolean
 }
 
-const Accordion = (props: AccordionTitleProps) => {
+const Accordion = (props: AccordionPropsType) => {
   return (
-    <div>
-      <AccordionTitle title={props.title} />
-      <AccordionBody />
-    </div>
+    (props.collapsed)
+      ?
+      <div>
+        <AccordionTitle title={props.title}/>
+        <AccordionBody/>
+      </div>
+      :
+      <div>
+        <AccordionTitle title={props.title}/>
+      </div>
   )
 }
 

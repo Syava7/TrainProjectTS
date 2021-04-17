@@ -1,10 +1,10 @@
 import React from 'react';
 
-type TitleProps = {
+type TitlePropsType = {
   title: string
 }
 
-const AppTitle = (props: TitleProps) => {
+const AppTitle = (props: TitlePropsType) => {
   return (
     <div>
       <h1>{props.title}</h1>
