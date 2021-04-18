@@ -1,9 +1,8 @@
-import React from 'react';
-import './App.css';
-import PageTitle from '../AppTitle/AppTitle';
-import Accordion from '../Accordion/Accordion';
-import Rating from '../Rating/Rating';
-
+import React from "react";
+import "./App.css";
+import PageTitle from "../AppTitle/AppTitle";
+import Accordion from "../Accordion/Accordion";
+import Rating from "../Rating/Rating";
 
 function App() {
   return (
@@ -13,10 +12,8 @@ function App() {
       </header>
       Article
       <Rating value={3} />
-      <Accordion title="Menu"
-                 collapsed={false} />
-      <Accordion title="Users"
-                 collapsed={true}/>
+      <Accordion title="Menu" collapsed={true} />
+      <Accordion title="Users" collapsed={false} />
       Article 2
       <Rating value={4} />
     </div>
