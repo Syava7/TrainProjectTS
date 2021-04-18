@@ -1,16 +1,55 @@
-import React from 'react'
+import React, { useState } from 'react'
 import s from './OnOff.module.css'
 
-type PropsType = {
-  on: boolean
+const OnOff = () => {
+  const [on, setOn] = useState(false)
+  return (
+    <div className={s.wrapOnOff}>
+      {on ? (
+        <div
+          className={s.on}
+          onClick={() => {
+            setOn(true)
+          }}
+        >
+          ON
+        </div>
+      ) : (
+        <div
+          className={s.disable}
+          onClick={() => {
+            setOn(true)
+          }}
+        >
+          ON
+        </div>
+      )}
+      {on ? (
+        <div
+          className={s.disable}
+          onClick={() => {
+            setOn(false)
+          }}
+        >
+          OFF
+        </div>
+      ) : (
+        <div
+          className={s.off}
+          onClick={() => {
+            setOn(false)
+          }}
+        >
+          OFF
+        </div>
+      )}
+      {on ? (
+        <div className={s.indicator}></div>
+      ) : (
+        <div className={s.indicatorDisable}></div>
+      )}
+    </div>
+  )
 }
-
-const OnOff = (props: PropsType) => (
-  <div className={s.wrapOnOff}>
-    <div className={s.on}>ON</div>
-    <div className={s.off}>OFF</div>
-    <div className={s.indicator}></div>
-  </div>
-)
 
 export default OnOff
