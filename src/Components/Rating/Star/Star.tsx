@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react'
 
 type StarPropsType = {
-  selected: boolean;
-};
+  selected: boolean
+}
 
 const Star = (props: StarPropsType) => {
   return props.selected ? (
@@ -11,7 +11,7 @@ const Star = (props: StarPropsType) => {
     </span>
   ) : (
     <span>Star </span>
-  );
-};
+  )
+}
 
-export default Star;
+export default Star

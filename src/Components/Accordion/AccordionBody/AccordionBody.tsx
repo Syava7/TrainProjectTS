@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const AccordionBody = () => {
   return (
@@ -9,7 +9,7 @@ const AccordionBody = () => {
         <li>3</li>
       </ul>
     </div>
-  );
-};
+  )
+}
 
-export default AccordionBody;
+export default AccordionBody

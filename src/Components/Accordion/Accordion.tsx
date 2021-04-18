@@ -1,11 +1,11 @@
-import React from "react";
-import AccordionTitle from "./AccordionTitle/AccordionTitle";
-import AccordionBody from "./AccordionBody/AccordionBody";
+import React from 'react'
+import AccordionTitle from './AccordionTitle/AccordionTitle'
+import AccordionBody from './AccordionBody/AccordionBody'
 
 type AccordionPropsType = {
-  title: string;
-  collapsed: boolean;
-};
+  title: string
+  collapsed: boolean
+}
 
 const Accordion = (props: AccordionPropsType) => {
   return (
@@ -13,7 +13,7 @@ const Accordion = (props: AccordionPropsType) => {
       <AccordionTitle title={props.title} />
       {!props.collapsed && <AccordionBody />}
     </div>
-  );
-};
+  )
+}
 
-export default Accordion;
+export default Accordion

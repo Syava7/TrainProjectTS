@@ -1,9 +1,9 @@
-import React from "react";
-import Star from "./Star/Star";
+import React from 'react'
+import Star from './Star/Star'
 
 type RatingPropsType = {
-  value: 0 | 1 | 2 | 3 | 4 | 5;
-};
+  value: 0 | 1 | 2 | 3 | 4 | 5
+}
 
 const Rating = (props: RatingPropsType) => {
   return (
@@ -14,7 +14,7 @@ const Rating = (props: RatingPropsType) => {
       <Star selected={props.value > 3} />
       <Star selected={props.value > 4} />
     </div>
-  );
-};
+  )
+}
 
-export default Rating;
+export default Rating
