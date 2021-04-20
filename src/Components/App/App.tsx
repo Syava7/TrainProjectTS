@@ -25,8 +25,16 @@ function App() {
               onClick={setRatingValue} />
       <Accordion title='Menu'
                  collapsed={collapsed}
-                 onToogle={setCollapsed} />
+                 onToogle={setCollapsed}
+                 items={[{title: 'Igor', value: 1},
+                         {title: 'Victor', value: 2},
+                         {title: 'Valera', value: 3},
+                         {title: 'Anna', value: 4},
+                 ]}
+                 onClick={(id) => alert(`${id}`)}/>
+
        Uncontrolled Uncontrolled Uncontrolled
+
       <UncontrolAccordion title={'Users'} />
       <UncontrollRating />
       <UncontrollOnOff />

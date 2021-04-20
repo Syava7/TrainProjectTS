@@ -6,6 +6,13 @@ type AccordionPropsType = {
   title: string
   collapsed: boolean
   onToogle: (collapsed: boolean) => void
+  items: ItemsType[]
+  onClick: (value: any) => void
+}
+
+export type ItemsType = {
+  title: string
+  value: number
 }
 
 const Accordion = (props: AccordionPropsType) => {
@@ -14,7 +21,8 @@ const Accordion = (props: AccordionPropsType) => {
       <AccordionTitle title={props.title}
                       onToogle={() => props.onToogle(!props.collapsed)}
                        />
-      {!props.collapsed && <AccordionBody />}
+      {!props.collapsed && <AccordionBody items={props.items}
+                                          onClick={props.onClick}/>}
     </div>
   )
 }
