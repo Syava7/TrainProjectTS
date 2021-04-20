@@ -1,0 +1,50 @@
+.wrapOnOff {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.on {
+  width: 30px;
+  height: 25px;
+  border: 1px solid black;
+  background-color: green;
+  transition: all 0.25s;
+  margin-left: 2px;
+}
+
+.disable {
+  background-color: grey;
+  width: 30px;
+  height: 25px;
+  border: 1px solid black;
+  margin-left: 2px;
+  transition: all 0.25s;
+}
+
+.off {
+  width: 30px;
+  height: 25px;
+  border: 1px solid black;
+  margin-left: 2px;
+  background-color: red;
+  transition: all 0.25s;
+}
+
+.indicator {
+  width: 25px;
+  height: 25px;
+  border-radius: 15px;
+  border: 1px solid black;
+  margin-left: 10px;
+  background-color: green;
+}
+
+.indicatorDisable {
+  width: 25px;
+  height: 25px;
+  border-radius: 15px;
+  border: 1px solid black;
+  margin-left: 10px;
+  background-color: red;
+}

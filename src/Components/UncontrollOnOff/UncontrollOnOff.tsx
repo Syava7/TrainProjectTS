@@ -1,22 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import s from './OnOff.module.css'
 
-type OnOffPropsType = {
-  on: boolean
-  onClickToogle: (on: boolean) => void
-}
-
-
-
-
-const OnOff = (props: OnOffPropsType) => {
+const UncontrollOnOff = () => {
+  const [on, setOn] = useState(false)
   return (
     <div className={s.wrapOnOff}>
-      {props.on ? (
+      {on ? (
         <div
           className={s.on}
           onClick={() => {
-            props.onClickToogle(props.on)
+            setOn(true)
           }}
         >
           ON
@@ -25,17 +18,17 @@ const OnOff = (props: OnOffPropsType) => {
         <div
           className={s.disable}
           onClick={() => {
-            props.onClickToogle(!props.on)
+            setOn(true)
           }}
         >
           ON
         </div>
       )}
-      {props.on ? (
+      {on ? (
         <div
           className={s.disable}
           onClick={() => {
-            props.onClickToogle(!props.on)
+            setOn(false)
           }}
         >
           OFF
@@ -44,13 +37,13 @@ const OnOff = (props: OnOffPropsType) => {
         <div
           className={s.off}
           onClick={() => {
-            props.onClickToogle(props.on)
+            setOn(false)
           }}
         >
           OFF
         </div>
       )}
-      {props.on ? (
+      {on ? (
         <div className={s.indicator}></div>
       ) : (
         <div className={s.indicatorDisable}></div>
@@ -59,4 +52,4 @@ const OnOff = (props: OnOffPropsType) => {
   )
 }
 
-export default OnOff
+export default UncontrollOnOff
