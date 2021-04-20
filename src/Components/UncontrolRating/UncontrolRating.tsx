@@ -5,7 +5,7 @@ import Star from './Star/Star'
   value: 0 | 1 | 2 | 3 | 4 | 5
 }*/
 
-const UncontrolRating = () => {
+const UncontrollRating = () => {
   const [value, setValue] = useState(0)
   return (
     <div>
@@ -18,4 +18,4 @@ const UncontrolRating = () => {
   )
 }
 
-export default UncontrolRating
+export default UncontrollRating

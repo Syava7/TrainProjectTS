@@ -13,7 +13,7 @@ const Star = (props: StarPropsType) => {
         props.setValue(props.value)
       }}
     >
-      {props.selected ? <b>Star </b> : 'star '}
+      {props.selected ? <b>Star </b> : 'Star '}
     </span>
   )
 }

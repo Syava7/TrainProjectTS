@@ -1,16 +1,21 @@
 import React from 'react'
+import { RatingValueType } from '../Rating'
 
 type StarPropsType = {
   selected: boolean
+  onClick: (value: RatingValueType) => void
+  value: RatingValueType
 }
 
 const Star = (props: StarPropsType) => {
-  return props.selected ? (
-    <span>
-      <b>Star </b>
+  return (
+    <span
+      onClick={() => {
+        props.onClick(props.value)
+      }}
+    >
+      {props.selected ? <b>Star </b> : 'Star '}
     </span>
-  ) : (
-    <span>Star </span>
   )
 }
 

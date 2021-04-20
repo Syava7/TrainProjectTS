@@ -1,25 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css'
 import PageTitle from '../AppTitle/AppTitle'
 import Accordion from '../Accordion/Accordion'
-import Rating from '../Rating/Rating'
+import Rating, { RatingValueType } from '../Rating/Rating'
 import OnOff from '../OnOff/OnOff'
 import UncontrolAccordion from '../UncontrolAccordion/UncontrolAccordion'
-import UncontrolRating from '../UncontrolRating/UncontrolRating'
+import UncontrollRating from '../UncontrolRating/UncontrolRating'
 
 function App() {
+  const [ratingValue, setRatingValue] = useState<RatingValueType>(0)
+
   return (
     <div className='App'>
       <header className='App-header'>
         <PageTitle title="I'm page title HAHAHAH" />
       </header>
-      Article
-      <Rating value={2} />
-      {/*<Accordion title='Menu' collapsed={true} />
-      <Accordion title='Users' collapsed={false} />*/}
-      <UncontrolAccordion title={'Menu'} />
-      Article 2{/*<Rating value={4} />*/}
-      <UncontrolRating />
+      Controlled
+      <Rating value={ratingValue} onClick={setRatingValue} />
+      <Accordion title='Menu' collapsed={true} />
+      Uncontrolled
+      <UncontrolAccordion title={'Users'} />
+      <UncontrollRating />
       <OnOff />
       <OnOff />
       <OnOff />
