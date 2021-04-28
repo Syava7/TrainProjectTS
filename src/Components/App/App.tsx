@@ -13,6 +13,7 @@ function App() {
   const [ratingValue, setRatingValue] = useState<RatingValueType>(0)
   const [collapsed, setCollapsed] = useState<boolean>(false)
   const [on, setOn] = useState<boolean>(false)
+  const [value, setValue] = useState(null);
 
   return (
     <div className='App'>
@@ -36,8 +37,8 @@ function App() {
       <Select items={[{title: 'Kiev', value: '1'},
                       {title: 'London', value: '2'},
                       {title: 'Vienna', value: '3'},]}
-              value={'1'}
-              onChange={() => 'changed'} />
+              value={value}
+              onChange={setValue} />
 
        Uncontrolled Uncontrolled Uncontrolled
 
