@@ -7,6 +7,7 @@ import UncontrollOnOff from '../UncontrollOnOff/UncontrollOnOff'
 import OnOff from '../OnOff/OnOff'
 import UncontrolAccordion from '../UncontrolAccordion/UncontrolAccordion'
 import UncontrollRating from '../UncontrolRating/UncontrolRating'
+import Select from "../Select/Select";
 
 function App() {
   const [ratingValue, setRatingValue] = useState<RatingValueType>(0)
@@ -32,6 +33,11 @@ function App() {
                          {title: 'Anna', value: 4},
                  ]}
                  onClick={(id) => alert(`${id}`)}/>
+      <Select items={[{title: 'Kiev', value: '1'},
+                      {title: 'London', value: '2'},
+                      {title: 'Vienna', value: '3'},]}
+              value={'1'}
+              onChange={() => 'changed'} />
 
        Uncontrolled Uncontrolled Uncontrolled
 
