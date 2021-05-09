@@ -12,6 +12,18 @@
   padding: 5px;
 }
 
+.item {
+  cursor: pointer;
+}
+
+.item.selected {
+  background-color: cornflowerblue;
+}
+
+.item:hover {
+  background-color: red;
+}
+
 .select.active .items{
   display: block;
 }
