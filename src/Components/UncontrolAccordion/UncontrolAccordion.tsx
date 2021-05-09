@@ -8,8 +8,7 @@ type AccordionPropsType = {
 }
 
 const UncontrolAccordion = (props: AccordionPropsType) => {
-  // const [collapsed, setCollapsed] = useState(false)
-  const [collapsed, dispatch] = useReducer(reducer, false)
+  const [state, dispatch] = useReducer(reducer, {collapsed: false})
   return (
     <div>
       <AccordionTitle
@@ -18,7 +17,7 @@ const UncontrolAccordion = (props: AccordionPropsType) => {
           dispatch({type: TOOGLE_COLLAPSED})
         }}
       />
-      {!collapsed && <AccordionBody />}
+      {!state.collapsed && <AccordionBody />}
     </div>
   )
 }

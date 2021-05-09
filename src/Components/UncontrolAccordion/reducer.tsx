@@ -3,10 +3,17 @@ type ActionType = {
 }
 export const TOOGLE_COLLAPSED = 'TOOGLE_COLLAPSED'
 
-export const reducer = (state: boolean, action: ActionType) => {
+export type StateType = {
+  collapsed: boolean
+}
+
+export const reducer = (state: StateType, action: ActionType): StateType => {
   switch (action.type) {
     case TOOGLE_COLLAPSED:
-      return !state
+      return {
+        ...state,
+        collapsed: !state.collapsed
+      }
     default:
       return state
   }
